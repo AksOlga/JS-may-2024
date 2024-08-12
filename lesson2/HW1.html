@@ -5,7 +5,14 @@
     <title>Title</title>
 </head>
 <body>
+
+
+
 <script>
+
+    /*-------------------exercise-1------------------*/
+
+
     let arr =[ 10, 20, 30, 40, -50, 0, 100, 150, -160, -170];
     console.log(arr[0]);
     console.log(arr[1]);
@@ -17,6 +24,255 @@
     console.log(arr[7]);
     console.log(arr[8]);
     console.log(arr[9]);
+
+
+/*-------------------exercise-2----------------------*/
+
+    // let book1 = {
+    //     title : 'House of the Dragon Game of Thrones',
+    //     pageCount : 500,
+    //     genre : 'fantasy',
+    // }
+    // console.log(book1)
+    // let book2 = {
+    //     title : 'House of the Dragon',
+    //     pageCount : 550,
+    //     genre : 'fantasy',
+    // }
+    // console.log(book2)
+    // let book3 = {
+    //     title : 'Harry Potter',
+    //     pageCount : 600,
+    //     genre : 'teen romance',
+    // }
+    // console.log(book3)
+
+
+    /*-------------------exercise-3----------------------*/
+
+
+    let book1 = {
+        title : 'House of the Dragon Game of Thrones',
+        pageCount : 500,
+        genre : 'fantasy',
+        authors:
+            {
+                name: 'George R',
+                age: 75
+            }
+
+    };
+    console.log(book1);
+    let book2 = {
+        title : 'House of the Dragon',
+        pageCount : 550,
+        genre : 'fantasy',
+        authors:
+            {
+                name: 'George R',
+                age: 75
+            }
+
+
+    };
+    console.log(book2)
+    let book3 = {
+        title : 'Harry Potter',
+        pageCount : 600,
+        genre : 'teen romance',
+        authors:
+            {
+                name: 'J. K. Rowling',
+                age: 59
+            }
+
+    }
+    console.log(book3)
+
+
+    /*-------------------exercise-4----------------------*/
+
+    let users = [
+        {
+            name: 'Іван Петров',
+            username: 'ivan.petrov',
+            password: 'password123'
+        },
+        {
+            name: 'Олена Сидорова',
+            username: 'olena.sydorova',
+            password: 'olena2024'
+        },
+        {
+            name: 'Максим Іванов',
+            username: 'maksym.ivanov',
+            password: 'max_ivanov2023'
+        },
+        {
+            name: 'Анна Ковальчук',
+            username: 'anna.kovalchuk',
+            password: 'anna_secure!'
+        },
+        {
+            name: 'Олександр Тарасов',
+            username: 'oleksandr.tarasov',
+            password: 'alex_pass987'
+        },
+        {
+            name: 'Дарина Лісова',
+            username: 'daryna.lisova',
+            password: 'daryna_2022'
+        },
+        {
+            name: 'Роман Стахов',
+            username: 'roman.stakhov',
+            password: 'roman@stakhov1'
+        },
+        {
+            name: 'Катерина Жукова',
+            username: 'kateryna.zhukova',
+            password: 'katerynaPass2020'
+        },
+        {
+            name: 'Віктор Кравченко',
+            username: 'viktor.kravchenko',
+            password: 'viktorKrav@99'
+        },
+        {
+            name: 'Марія Нестеренко',
+            username: 'mariya.nesterenko',
+            password: 'mariyaNester2021'
+        }
+    ];
+
+    users.forEach(user => {
+        console.log(user.password);
+    });
+
+
+    /*-------------------exercise-5----------------------*/
+
+
+
+    let temperatureData =[{
+        Monday: {
+            morning: 18,
+            afternoon: 25,
+            evening: 20,
+        },
+        Tuesday: {
+            morning: 18,
+            afternoon: 25,
+            evening: 20,
+        },
+        Wednesday: {
+            morning: 18,
+            afternoon: 25,
+            evening: 20,
+        },
+        Thursday: {
+            morning: 18,
+            afternoon: 25,
+            evening: 20,
+        },
+        Friday: {
+            morning: 18,
+            afternoon: 25,
+            evening: 20,
+        },
+        Saturday: {
+            morning: 18,
+            afternoon: 25,
+            evening: 20,
+        },
+        Sunday: {
+            morning: 18,
+            afternoon: 25,
+            evening: 20,
+        },
+
+    }
+    ];
+    console.log(temperatureData)
+
+
+    /*-------------------exercise-6----------------------*/
+
+    let num = -3;
+    if (num ===0){
+        console.log(true)
+    }
+    else {
+        console.log(false)
+    }
+
+
+    /*-------------------exercise-7----------------------*/
+
+    let time = 6;
+
+    if (time >= 0 && time < 15) {
+        console.log('Перша чверть години');
+    } else if (time >= 15 && time < 30) {
+        console.log('Друга чверть години');
+    } else if (time >= 30 && time < 45) {
+        console.log('Третя чверть години');
+    } else if (time >= 45 && time < 60) {
+        console.log('Четверта чверть години');
+    } else {
+        console.log('Неправильне значення часу');
+    }
+
+    /*-------------------exercise-8----------------------*/
+
+    let day = 20
+    if (day >= 0 && day <15){
+        console.log("Перша декада місяця");
+    }
+    else if (day >=15 && day <20){
+        console.log("Друга декада місяця");
+    }
+    else if (day >=20 && day <31){
+        console.log("Третья декада місяця");
+    }
+    else {
+        console.log(false)
+    }
+
+
+    /*-------------------exercise-9----------------------*/
+
+    switch (7){
+        case 1:
+            console.log('Monday');
+            break;
+
+        case 2:
+            console.log('Tuesday');
+            break;
+
+
+        case 3:
+            console.log('Wednesday');
+            break;
+
+        case 4:
+            console.log('Thursday');
+            break;
+
+        case 5:
+            console.log('Friday');
+            break;
+
+        case 6:
+            console.log('Saturday');
+            break;
+
+        case 7:
+            console.log('Sunday');
+
+    }
+
 
 </script>
 </body>
