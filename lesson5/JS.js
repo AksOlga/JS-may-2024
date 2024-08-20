@@ -120,30 +120,30 @@
 
 
 /*-------------------exercise-12----------------------*/
-//
-// const swap=(arr, index1, index2) =>{
-//     let temp = arr[index1];
-//     arr[index1] = arr[index2];
-//     arr[index2] = temp;
-//
-//     return arr;
-// }
-// console.log(swap([11, 22, 33, 44], 0, 1));
+
+const swap=(arr, index1, index2) =>{
+    let temp = arr[index1];
+    arr[index1] = arr[index2];
+    arr[index2] = temp;
+
+    return arr;
+}
+console.log(swap([11, 22, 33, 44], 0, 1));
 
 
 /*-------------------exercise-13----------------------*/
-
-const exchange = (sumUAH, currencyValues, exchangeCurrency) => {
-    for (let i = 0; i < currencyValues.length; i++) {
-        if (currencyValues[i].currency === exchangeCurrency) {
-            let rate = currencyValues[i].value;
-            return sumUAH / rate;
-        }
-    }
-    return `Валюта ${exchangeCurrency} не знайдена.`;
-}
-
-console.log(exchange(10000, [{currency: 'USD', value: 25}, {currency: 'EUR', value: 42}], 'USD')); // Виведе 400
+//
+// const exchange = (sumUAH, currencyValues, exchangeCurrency) => {
+//     for (let i = 0; i < currencyValues.length; i++) {
+//         if (currencyValues[i].currency === exchangeCurrency) {
+//             let rate = currencyValues[i].value;
+//             return sumUAH / rate;
+//         }
+//     }
+//     return `Валюта ${exchangeCurrency} не знайдена.`;
+// }
+//
+// console.log(exchange(10000, [{currency: 'USD', value: 25}, {currency: 'EUR', value: 42}], 'USD')); // Виведе 400
 
 
 
