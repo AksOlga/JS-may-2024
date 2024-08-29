@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Increment Number</title>
+</head>
+<body>
+
+
+<div id="numberBlock"></div>
+
+<script>
+
+    let currentNumber = localStorage.getItem('number');
+
+    if (currentNumber === null) {
+        currentNumber = 0;
+    } else {
+        currentNumber = parseInt(currentNumber);
+    }
+
+    currentNumber += 1;
+    localStorage.setItem('number', currentNumber);
+    document.getElementById('numberBlock').textContent = currentNumber;
+</script>
+
+</body>
+</html>

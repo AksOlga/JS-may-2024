@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagination</title>
+    <style>
+        .object-item {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+<h1>Пагінація</h1>
+<div id="objectList"></div>
+<button id="prevBtn">Prev</button>
+<button id="nextBtn">Next</button>
+
+<script>
+
+    const objectsArray = Array.from({length: 100}, (v, i) => ({id: i + 1, name: `Об'єкт ${i + 1}`}));
+
+    const itemsPerPage = 10;
+    let currentPage = 1;
+
+
+    function displayObjects(page) {
+        const startIndex = (page - 1) * itemsPerPage;
+        const endIndex = startIndex + itemsPerPage;
+        const objectsToDisplay = objectsArray.slice(startIndex, endIndex);
+
+        const objectList = document.getElementById('objectList');
+        objectList.innerHTML = '';
+
+        objectsToDisplay.forEach(obj => {
+            const objectItem = document.createElement('div');
+            objectItem.className = 'object-item';
+            objectItem.textContent = `${obj.id}: ${obj.name}`;
+            objectList.appendChild(objectItem);
+        });
+    }
+
+
+    function nextPage() {
+        if (currentPage < Math.ceil(objectsArray.length / itemsPerPage)) {
+            currentPage++;
+            displayObjects(currentPage);
+        }
+    }
+
+    function prevPage() {
+        if (currentPage > 1) {
+            currentPage--;
+            displayObjects(currentPage);
+        }
+    }
+
+    document.getElementById('nextBtn').addEventListener('click', nextPage);
+    document.getElementById('prevBtn').addEventListener('click', prevPage);
+
+
+    displayObjects(currentPage);
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index Page</title>
+</head>
+<body>
+
+
+<script>
+let sessionsList;
+if (localStorage.getItem('sessionsList')){
+    sessionsList = JSON.parse(localStorage.getItem('sessionsList'))
+}else {
+    sessionsList =[]
+}
+sessionsList.push(new Date());
+localStorage.setItem('sessionsList', JSON.stringify(sessionsList))
+
+
+
+</script>
+</body>
+</html>

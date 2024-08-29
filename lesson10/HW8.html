@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Генератор таблиці</title>
+</head>
+<body>
+<h1>Генератор таблиці</h1>
+<div>
+    <label for="rows">Кількість рядків:</label>
+    <input type="number" id="rows" min="1" value="1"><br><br>
+
+    <label for="columns">Кількість ячеєк:</label>
+    <input type="number" id="columns" min="1" value="1"><br><br>
+
+    <label for="content">Вміст ячеєк:</label>
+    <input type="text" id="content" value="Текст"><br><br>
+
+    <button id="generateTable">Згенерувати таблицю</button>
+</div>
+
+<h2>Згенерована таблиця:</h2>
+<div id="tableContainer"></div>
+
+<script>
+    document.getElementById('generateTable').addEventListener('click', function() {
+
+        const rows = document.getElementById('rows').value;
+        const columns = document.getElementById('columns').value;
+        const content = document.getElementById('content').value;
+
+
+        let table = document.createElement('table');
+        table.border = '1';
+
+        for (let i = 0; i < rows; i++) {
+            let tr = document.createElement('tr');
+            for (let j = 0; j < columns; j++) {
+                let td = document.createElement('td');
+                td.textContent = content;
+                tr.appendChild(td);
+            }
+            table.appendChild(tr);
+        }
+
+
+        const tableContainer = document.getElementById('tableContainer');
+        tableContainer.innerHTML = '';
+        tableContainer.appendChild(table);
+    });
+</script>
+</body>
+</html>

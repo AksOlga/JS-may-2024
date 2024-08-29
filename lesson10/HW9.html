@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Зміна ціни</title>
+</head>
+<body>
+<div id="priceBlock">100грн</div>
+
+<script>
+
+    function updatePrice() {
+
+        const now = Date.now();
+
+
+        let lastUpdate = localStorage.getItem('lastUpdateTime');
+        let currentPrice = localStorage.getItem('currentPrice');
+
+
+        if (!currentPrice) {
+            currentPrice = 100;
+        } else {
+            currentPrice = parseInt(currentPrice, 10);
+        }
+
+
+        if (!lastUpdate) {
+            lastUpdate = now;
+            localStorage.setItem('lastUpdateTime', lastUpdate);
+        }
+
+        const timeDiff = (now - lastUpdate) / 1000;
+        if (timeDiff >= 10) {
+            currentPrice += 10;
+            localStorage.setItem('currentPrice', currentPrice);
+            localStorage.setItem('lastUpdateTime', now);
+        }
+
+        document.getElementById('priceBlock').textContent = currentPrice + 'грн';
+    }
+
+
+    updatePrice();
+</script>
+</body>
+</html>
